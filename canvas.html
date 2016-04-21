@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>松树</title>
+</head>
+<body>
+    <canvas id="canvas" width="700" height="600"></canvas>
+    
+    <script>
+        var can = document.getElementById('canvas');
+        var con = can.getContext('2d');
+        
+        con.fillStyle = 'green';
+        
+        function san(x,y,i){
+            con.beginPath();
+            con.moveTo(x,y);
+            con.lineTo(x+75+15*i,y+50)
+            con.lineTo(x-75-15*i,y+50)
+            con.closePath();
+            con.fill()
+        }
+        
+        for(var i=0;i<10;i++){
+            san(250,i*50,i)
+        }
+        
+        con.fillStyle = '#998844';
+        con.fillRect(225,i*50,50,100)
+    </script>
+</body>
+</html>
